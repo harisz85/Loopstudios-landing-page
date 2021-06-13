@@ -1,0 +1,137 @@
+.header {
+    background:   url(../../images/desktop/image-hero.jpg) top ;
+    background-size: cover;
+    height: 75vh;
+    position: relative;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)  {
+        height: 60vh;
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)  {
+    height: 80vh;
+    }
+
+    @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+        height: 90vh;
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        height: 100vh;
+    }
+    
+
+
+    
+
+    &__nav {
+        width: 65%;
+        margin:  0 auto;
+        padding-top: 5rem;
+        
+        @include clearfix;
+
+        @media only screen  and (max-width : 1200px)  {
+            width: 75%;
+        }
+
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            width : 79%
+        }
+
+
+        @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+            width: 80%;
+        }
+
+    }
+
+    &__logo {
+
+        float: left;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        
+            float: none;
+        }
+
+
+    }
+
+    &__list  {
+        float: right;
+
+        
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        
+            float: none;
+            position: relative;
+            top: 1.5rem;
+            left: 8.5rem;
+        }
+
+        @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+            position: relative;
+            top: 1rem;
+        }
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            display: none;
+        }
+    }
+
+    &__title {
+
+        position: absolute;
+        top:18rem;
+        left: 21.93rem;
+        text-transform: uppercase;
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight:lighter;
+        color: var(--white);
+        border: 1px solid var(--white) ;
+        padding: 2rem 2.5rem 2rem 2rem;
+        width: 39%;
+        
+        
+        @media only screen  and (max-width : 1200px) {
+            width: 45%;
+            left: 9.93rem;
+        }
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+            width: 76%;
+            left: 5.9rem;
+            font-size: 2rem;
+        }
+        
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+            width: 71%;
+            top: 9rem;
+            left: 8.93rem;
+
+        }
+
+
+        @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+            width: 80%;
+            font-size: 1.2rem;
+            top: 12rem;
+            left: 4.4rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            top: 20rem;
+            left: 2.5rem;
+            width: 82%;
+            font-size: 1.3rem;
+            padding: 1rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,167 @@
+.list {
+    
+    &--item  {
+        display: inline-block;
+        
+
+        &:not(:last-child){
+            margin-right: 3rem;
+
+
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    &--link {
+        position: relative;
+
+        &:link,
+        &:visited {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        &:hover::after {
+            content: "";
+            display: inline-block;
+            width: 1.5rem;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            top: 2rem;
+            right: 16%;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+    }
+}
+
+
+
+
+
+// burger button 
+
+
+.burger {
+
+    display: none;
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 5rem;
+        }                  
+
+
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__icon {
+        
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+
+        display: inline-block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--white);
+        }
+        
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -.5rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: .5rem;
+        }
+    }
+
+    &__background {
+
+    }
+
+    &__nav {
+        position: absolute;
+        transition: transform 1s ease-in-out;
+        
+    }
+
+    &__list {
+        display: none;
+        list-style-type: none;
+
+        position: relative;
+        top:1.5rem;
+        left: 5rem;
+    }
+
+    &__item {
+        display: inline;
+        margin-right: .9rem;
+
+    }
+
+    &__link {
+        
+        text-decoration: none;
+
+        
+        &:link,
+        &:visited {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            color: var(--white);
+            text-decoration: none;
+        }
+    }
+
+
+    // functionality
+
+    &__checkbox:checked ~ &__nav &__list {
+        display: inline-flex;
+
+        
+    }
+
+
+    &__checkbox:checked ~ &__nav {
+        transform: translate(-110%,);
+        
+    }
+
+}
+
+
+
+
+
+
+

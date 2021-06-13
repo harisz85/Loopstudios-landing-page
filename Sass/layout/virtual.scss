@@ -1,0 +1,114 @@
+.virtual  {
+    position: relative;
+
+    img {
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+            width: 100%;
+        }
+
+
+        @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+            width: 100%;
+        }
+
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+            width: 100%;
+    }
+
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        
+        width: 100%;
+    }
+
+}
+
+.description {
+
+    width: 55%;
+    padding: 6rem 7.5rem 6rem 9rem;
+    position: absolute;
+    top: 14rem;
+    background-color: white;
+    left: 39rem;
+
+
+    @media only screen  and (max-width : 1200px)  {
+        width: 76%;
+        left: 20rem;
+        top: 23rem;
+        padding-bottom: 3rem;
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        width: 92%;
+        padding:2rem 3rem;
+        top: 20rem;
+        left: 7rem;
+            
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+        width: 90%;
+        left: 11rem;
+        top: 20rem;
+        padding-top: 4rem;
+        padding-left: 6rem;
+    }
+
+    @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+        width: auto;
+        left: 0;
+        padding: 1.5rem 1rem 1rem;
+        text-align: center;
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        width: auto;
+        top: 17rem;
+        left: 0;
+        padding: 0;
+
+    }
+
+
+
+
+
+        
+    h1 {
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+        font-weight: lighter;
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    p {
+        color:var(--dark-gray);
+        line-height: 1.5;
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            text-align: center;
+            line-height: 1.8;
+            padding: 0 1.5rem;
+            
+        }
+    }
+}

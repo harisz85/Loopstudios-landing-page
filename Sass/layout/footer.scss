@@ -1,0 +1,120 @@
+.footer {
+
+    background-color: var(--black);
+
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        position: relative;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+
+    &__one {
+
+        width: 65%;
+        margin: 0 auto;
+        padding-top: 3rem;
+        
+        @media only screen  and (max-width : 1200px) {
+            width: 75%;
+        }
+
+    }
+
+        &__two {
+
+        width: 65%;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @media only screen  and (max-width : 1200px) {
+            width: 75%;
+        }
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+            padding-top: 1rem;
+        }
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            padding-top: 2rem;
+        }
+
+
+        ul {
+            display: inline-block;
+
+
+            @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+                width:40%;
+                column-count: 2;
+            }
+
+
+
+            li {
+                    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+                        &:not(:last-child) {
+                            margin-right: 2rem;
+                        }
+
+                }
+
+                @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+    &__objects {
+
+        float: right;
+
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            float: none;
+            position: absolute;
+            bottom: 3rem;
+            transform: translateX(40%);
+            
+        }
+
+        a {
+            &:not(:last-child) {
+                margin-right: 1rem;
+
+            }
+        }
+    }
+}
+
+.copyright {
+
+    float: right;
+    color: var(--very-dark-gray);
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+        float: none;
+        margin-top: 1.5rem;
+    }
+
+    p {
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            padding-top: 4rem;
+        }
+    }
+}
+
+#footer_list--item {
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}  

@@ -2,14 +2,9 @@
     position: relative;
 
     img {
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 
-            width: 100%;
-        }
-
-
-        @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
-            width: 100%;
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            width: 52%;
         }
 
 
@@ -19,15 +14,6 @@
 
     }
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-            width: 100%;
-    }
-
-
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-        
-        width: 100%;
-    }
 
 }
 
@@ -41,36 +27,21 @@
     left: 39rem;
 
 
-    @media only screen  and (max-width : 1200px)  {
-        width: 76%;
-        left: 20rem;
-        top: 23rem;
-        padding-bottom: 3rem;
+    @media only screen and (min-device-width : 769px) and (max-device-width : 1600px) {
+        top: 21rem;
+        left: 31rem;
+        padding-right: 2rem;
+        padding-left: 3rem;
     }
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-        width: 92%;
-        padding:2rem 3rem;
-        top: 20rem;
-        left: 7rem;
-            
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        width: 67%;
+        left: 19rem;
+        top: 8rem;
     }
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-
-        width: 90%;
-        left: 11rem;
-        top: 20rem;
-        padding-top: 4rem;
-        padding-left: 6rem;
-    }
-
-    @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
-        width: auto;
-        left: 0;
-        padding: 1.5rem 1rem 1rem;
-        text-align: center;
-    }
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         width: auto;
@@ -92,6 +63,11 @@
         line-height: 1;
         margin-bottom: 1.5rem;
         font-weight: lighter;
+
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            font-size: 2.5rem;
+        }
 
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
             margin-top: 1.5rem;

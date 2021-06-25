@@ -39,12 +39,15 @@ a.btn {
   text-decoration: none;
   color: var(--black);
   border-radius: 3px; }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @media screen and (max-device-width: 480px) {
     a.btn {
       float: none;
-      position: absolute;
-      transform: translateX(55%);
-      top: 82rem; } }
+      display: block;
+      width: 50%;
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      top: 83rem; } }
   a.btn:link, a.btn:visited {
     color: var(--black); }
   a.btn:hover, a.btn:active {
@@ -55,9 +58,6 @@ a.btn {
   display: inline-block; }
   .list--item:not(:last-child) {
     margin-right: 3rem; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-      .list--item:not(:last-child) {
-        margin-right: 2rem; } }
 
 .list--link {
   position: relative; }
@@ -107,7 +107,7 @@ a.btn {
       top: .5rem; }
   .burger__nav {
     position: absolute;
-    transition: transform 1s ease-in-out; }
+    transition: transform .9s ease-in-out; }
   .burger__list {
     display: none;
     list-style-type: none;
@@ -128,101 +128,69 @@ a.btn {
   .burger__checkbox:checked ~ .burger__nav .burger__list {
     display: inline-flex; }
   .burger__checkbox:checked ~ .burger__nav {
-    transform: translate(-122%); }
+    transform: translate(-129%); }
 
 .creations {
+  position: relative;
   margin-top: 8rem;
   margin-bottom: 3rem; }
   .creations::after {
     content: "";
     clear: both;
     display: table; }
-  @media only screen and (min-device-width: 769px) and (max-device-width: 1600px) {
+  @media screen and (max-device-width: 480px) {
     .creations {
-      margin-top: 14rem; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .creations {
-      margin-top: 10rem; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .creations {
-      position: relative;
-      margin-top: 23rem; } }
+      margin-top: 6rem;
+      margin-bottom: 0; } }
   .creations h1 {
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem;
     font-weight: lighter;
     float: left; }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media screen and (max-device-width: 480px) {
       .creations h1 {
+        font-size: 2rem;
         float: none;
-        text-align: center;
-        font-size: 2rem; } }
+        text-align: center; } }
 
 .footer {
   background-color: var(--black); }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @media screen and (max-device-width: 480px) {
     .footer {
-      position: relative;
       text-align: center;
-      padding-bottom: 4rem; } }
+      padding-bottom: 3rem; } }
   .footer__one {
     width: 65%;
     margin: 0 auto;
     padding-top: 3rem; }
-    @media only screen and (max-width: 1200px) {
-      .footer__one {
-        width: 75%; } }
   .footer__two {
     width: 65%;
     margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem; }
-    @media only screen and (max-width: 1200px) {
+    @media screen and (max-device-width: 480px) {
       .footer__two {
-        width: 75%; } }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-      .footer__two {
-        padding-top: 1rem; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      .footer__two {
-        padding-top: 2rem; } }
-    .footer__two ul {
-      display: inline-block; }
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .footer__two ul li:not(:last-child) {
-          margin-right: 2rem; } }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .footer__two ul li {
-          display: block; } }
+        padding-top: 0; } }
+  .footer__list--item {
+    margin-bottom: 1rem; }
   .footer__objects {
     float: right; }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media screen and (max-device-width: 480px) {
       .footer__objects {
         float: none;
-        position: absolute;
-        bottom: 4rem;
-        left: 2rem;
-        transform: translateX(50%); } }
+        position: relative;
+        top: 15rem; } }
     .footer__objects a:not(:last-child) {
       margin-right: 1rem; }
 
 .copyright {
   float: right;
   color: var(--very-dark-gray); }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  @media screen and (max-device-width: 480px) {
     .copyright {
       float: none;
-      margin-top: 1.5rem; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .copyright p {
-      padding-top: 4rem;
-      padding-right: 1.5rem; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  #f_list--item {
-    margin-right: 0;
-    margin-bottom: 1rem; } }
+      margin-top: 5rem; } }
 
 .container {
   display: grid;
@@ -231,22 +199,14 @@ a.btn {
   width: auto;
   column-gap: 1rem;
   row-gap: 2rem; }
-  @media only screen and (max-width: 1200px) {
-    .container {
-      grid-template-columns: repeat(3, auto);
-      column-gap: .5rem;
-      row-gap: .5rem; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .container {
-      grid-template-columns: repeat(4, auto); } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @media screen and (max-device-width: 480px) {
     .container {
       display: block; } }
 
 .item {
   position: relative;
   transition: opacity .3s ease-in; }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @media screen and (max-device-width: 480px) {
     .item {
       margin-bottom: 1rem; } }
   .item a {
@@ -271,36 +231,21 @@ a.btn {
   position: absolute;
   bottom: 2rem;
   left: 2.5rem; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  @media screen and (max-device-width: 480px) {
     .caption {
-      width: 59%;
-      font-size: 1rem;
-      left: 1rem;
-      bottom: 1rem; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .caption {
-      width: 45%;
-      font-size: 1.5rem;
-      left: 1rem;
-      bottom: 1rem; } }
+      left: 0;
+      bottom: 1.5rem;
+      font-size: 1.6rem;
+      padding: 0 1.5rem; } }
 
 .header {
   background: top;
   background-size: cover;
   height: 75vh;
   position: relative; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .header {
-      height: 50vh; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .header {
-      height: 100vh; } }
   .header__desktop {
     position: absolute;
     width: 100%; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      .header__desktop {
-        width: 100%; } }
   .header__nav {
     width: 65%;
     margin: 0 auto;
@@ -309,27 +254,15 @@ a.btn {
       content: "";
       clear: both;
       display: table; }
-    @media only screen and (max-width: 1200px) {
+    @media screen and (max-device-width: 480px) {
       .header__nav {
-        width: 75%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      .header__nav {
-        width: 79%; } }
+        width: 80%; } }
   .header__logo {
     position: relative;
     float: left; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      .header__logo {
-        float: none; } }
   .header__list {
     float: right; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      .header__list {
-        float: none;
-        position: relative;
-        top: 1.5rem;
-        left: 8.5rem; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media screen and (max-device-width: 480px) {
       .header__list {
         display: none; } }
   .header__title {
@@ -344,41 +277,25 @@ a.btn {
     border: 1px solid var(--white);
     padding: 2rem 2.5rem 2rem 2rem;
     width: 39%; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media screen and (max-device-width: 480px) {
       .header__title {
-        left: 8.5rem;
-        top: 11rem;
-        font-size: 1.5rem; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      .header__title {
-        top: 20rem;
-        left: 2.5rem;
         width: 82%;
-        font-size: 1.3rem;
-        padding: 1rem; } }
+        left: 3rem;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        padding: 2rem 1rem 1rem;
+        line-height: 1; } }
 
 .main {
   width: 65%;
-  margin: 7rem auto 10rem; }
-  @media only screen and (min-device-width: 769px) and (max-device-width: 1600px) {
+  margin: 14rem auto 10rem; }
+  @media screen and (max-device-width: 480px) {
     .main {
-      margin-top: 8rem; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .main {
-      width: 75%;
-      margin-top: 6rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .main {
-      width: 90%;
-      margin-top: 3rem; } }
+      width: 80%; } }
 
 .virtual {
   position: relative; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .virtual img {
-      width: 52%; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @media screen and (max-device-width: 480px) {
     .virtual img {
       width: 100%; } }
 
@@ -389,24 +306,10 @@ a.btn {
   top: 14rem;
   background-color: white;
   left: 39rem; }
-  @media only screen and (min-device-width: 769px) and (max-device-width: 1600px) {
+  @media screen and (max-device-width: 480px) {
     .description {
-      top: 21rem;
-      left: 31rem;
-      padding-right: 2rem;
-      padding-left: 3rem; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .description {
-      padding-bottom: 2rem;
-      padding-top: 2rem;
-      width: 67%;
-      left: 19rem;
-      top: 8rem; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .description {
-      width: auto;
-      top: 17rem;
-      left: 0;
+      position: initial;
+      width: 100%;
       padding: 0; } }
   .description h1 {
     text-transform: uppercase;
@@ -415,19 +318,15 @@ a.btn {
     line-height: 1;
     margin-bottom: 1.5rem;
     font-weight: lighter; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media screen and (max-device-width: 480px) {
       .description h1 {
-        font-size: 2.5rem; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      .description h1 {
-        margin-top: 1.5rem;
         font-size: 2rem;
+        margin-top: 1.5rem;
         text-align: center; } }
   .description p {
     color: var(--dark-gray);
     line-height: 1.5; }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media screen and (max-device-width: 480px) {
       .description p {
         text-align: center;
-        line-height: 1.8;
-        padding: 0 1.5rem; } }
+        padding: 0 2rem; } }

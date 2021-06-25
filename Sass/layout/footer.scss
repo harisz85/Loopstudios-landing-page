@@ -2,12 +2,11 @@
 
     background-color: var(--black);
 
-
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        position: relative;
+    @media screen and (max-device-width: 480px) {
         text-align: center;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
     }
+
 
 
     &__one {
@@ -16,9 +15,7 @@
         margin: 0 auto;
         padding-top: 3rem;
         
-        @media only screen  and (max-width : 1200px) {
-            width: 75%;
-        }
+
 
     }
 
@@ -29,39 +26,15 @@
         padding-top: 3rem;
         padding-bottom: 3rem;
 
-        @media only screen  and (max-width : 1200px) {
-            width: 75%;
+        @media screen and (max-device-width: 480px) {
+            padding-top: 0;
         }
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
-
-            padding-top: 1rem;
-        }
-
-        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-            padding-top: 2rem;
-        }
-
-
-        ul {
-            display: inline-block;
-
-
-            li {
-                    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-                        &:not(:last-child) {
-                            margin-right: 2rem;
-                        }
-
-                }
-
-                @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-                    display: block;
-                }
-            }
-        }
     }
+
+        &__list--item {
+        margin-bottom: 1rem;
+        }
 
 
     &__objects {
@@ -69,14 +42,13 @@
         float: right;
 
 
-        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        @media screen and (max-device-width: 480px) {
             float: none;
-            position: absolute;
-            bottom: 4rem;
-            left: 2rem;
-            transform: translateX(50%);
-            
+            position: relative;
+            top: 15rem;
         }
+
+
 
         a {
             &:not(:last-child) {
@@ -92,24 +64,11 @@
     float: right;
     color: var(--very-dark-gray);
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
+    @media screen and (max-device-width: 480px) {
         float: none;
-        margin-top: 1.5rem;
+        margin-top: 5rem;
     }
 
-    p {
-        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-            padding-top: 4rem;
-            padding-right: 1.5rem;
-        }
-    }
 }
 
-#f_list--item {
-
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-}  

@@ -7,10 +7,6 @@
         &:not(:last-child){
             margin-right: 3rem;
 
-
-            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-                margin-right: 2rem;
-            }
         }
     }
 
@@ -105,7 +101,7 @@
 
     &__nav {
         position: absolute;
-        transition: transform 1s ease-in-out;
+        transition: transform .9s ease-in-out;
         
     }
 
@@ -153,7 +149,7 @@
 
 
     &__checkbox:checked ~ &__nav {
-        transform: translate(-122%,);
+        transform: translate(-129%,);
         
     }
 

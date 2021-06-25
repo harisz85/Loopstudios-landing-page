@@ -1,6 +1,7 @@
 .footer {
 
     background-color: var(--black);
+    padding-bottom: 2rem;
 
     @media screen and (max-device-width: 480px) {
         text-align: center;
@@ -32,9 +33,33 @@
 
     }
 
-        &__list--item {
-        margin-bottom: 1rem;
+    &__list {
+        float: left;
+
+        @media screen and (max-device-width: 480px) {
+            float: none;
         }
+    }
+
+    &__list--item {
+    margin-bottom: 1rem;
+    display: inline-block;
+
+        
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+
+        @media screen and (max-device-width: 480px) {
+            display: block;
+            
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
 
 
     &__objects {

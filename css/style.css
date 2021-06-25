@@ -128,7 +128,7 @@ a.btn {
   .burger__checkbox:checked ~ .burger__nav .burger__list {
     display: inline-flex; }
   .burger__checkbox:checked ~ .burger__nav {
-    transform: translate(-129%); }
+    transform: translate(-122%); }
 
 .creations {
   position: relative;

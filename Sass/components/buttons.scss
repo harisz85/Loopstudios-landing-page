@@ -21,10 +21,6 @@ a.btn {
         }
 
 
-
-
-
-
     &:link,
     &:visited {
         
@@ -37,5 +33,48 @@ a.btn {
 
         background-color:var(--black);
         color: var(--white)
+    }
+}
+
+
+
+.closeBtn {
+
+    position: relative; 
+    top: 1rem;
+    left: 9rem;
+
+    & {
+        background-color: transparent;
+        border: none;
+    }
+
+
+
+    &::before,
+    &::after{
+
+        display: inline-block;
+        width: 1.8rem;
+        height: 2px;
+        background-color: var(--white);
+        cursor: pointer;
+        
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        transform: rotate(135deg);
+        
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        transform: rotate(-135deg);
     }
 }

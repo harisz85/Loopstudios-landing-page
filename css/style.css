@@ -54,6 +54,30 @@ a.btn {
     background-color: var(--black);
     color: var(--white); }
 
+.closeBtn {
+  position: relative;
+  top: 1rem;
+  left: 9rem; }
+  .closeBtn {
+    background-color: transparent;
+    border: none; }
+  .closeBtn::before, .closeBtn::after {
+    display: inline-block;
+    width: 1.8rem;
+    height: 2px;
+    background-color: var(--white);
+    cursor: pointer; }
+  .closeBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: rotate(135deg); }
+  .closeBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: rotate(-135deg); }
+
 .list--item {
   display: inline-block; }
   .list--item:not(:last-child) {
@@ -79,7 +103,20 @@ a.btn {
     animation: pulse 1.5s infinite ease-in-out; }
 
 .burger {
-  display: none; }
+  display: none;
+  /*    &__checkbox:checked ~ &__nav &__list {
+        display: inline-flex;
+
+        
+    }
+
+
+    &__checkbox:checked ~ &__nav {
+        transform: translate(-122%,);
+        
+    }
+
+    */ }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .burger {
       display: block;
@@ -125,10 +162,45 @@ a.btn {
     .burger__link:hover, .burger__link:active {
       color: var(--white);
       text-decoration: none; }
-  .burger__checkbox:checked ~ .burger__nav .burger__list {
-    display: inline-flex; }
-  .burger__checkbox:checked ~ .burger__nav {
-    transform: translate(-122%); }
+
+.sidebar {
+  display: none; }
+  @media screen and (max-device-width: 480px) {
+    .sidebar {
+      display: initial;
+      position: fixed;
+      background-color: var(--black);
+      height: 100vh;
+      width: 100vh;
+      z-index: 1000;
+      padding-top: 5rem;
+      padding-left: 2rem;
+      transform: translate(-100%);
+      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); } }
+  .sidebar__header {
+    display: flex; }
+
+.show-sidebar {
+  transform: translate(0%); }
+
+.side__list {
+  margin-top: 10rem; }
+
+.side__item {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: lighter;
+  font-family: 'Josefin Sans', sans-serif; }
+  .side__item:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.side__link:link, .side__link:visited {
+  text-decoration: none;
+  color: var(--white); }
+
+.side__link:hover, .side__link:after {
+  text-decoration: none;
+  color: var(--white); }
 
 .creations {
   position: relative;
